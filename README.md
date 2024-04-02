@@ -22,7 +22,7 @@
         <p>Here's are some of my projects that I've been working on:</p>
         <ul>
           <li><h4>Web Development</h4>
-            <div id="gym"><ul><li><a href="" target="_blank">ST dt school Website</a></li>
+            <div id="school"><ul><li><a href="https://infernoduk.github.io/Code-portfolio/" target="_blank">ST dt school Website</a></li>
                 <p>This is my individual website built with HTML and CSS. 
                 It is a school website that provides details about the school. 
                     This website provides information about st.dt academy their achievements,courses,teachers and a gallery .</p>
