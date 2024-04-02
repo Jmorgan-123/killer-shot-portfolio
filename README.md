@@ -44,17 +44,32 @@ transactions, and generate a balance sheet</p></li>
                             <li><p>It computes the total sales and total purchases for each day, providing Mr. Benson with a clear overview of his business transactions.</p></li>
                         </ul>
                     </li>
-                    <li>Profit Calculation
+                    <li>Actions
                         <ul>
-                            <li><p>Based on the sales and purchase data, the app automatically calculates the daily profit. 
-                                It subtracts the total purchase cost from the total sales revenue</p></li>
-                            <li><p>Mr. Benson can quickly assess how well his kiosk is performing financially.</p></li>
+                            <li><p>- Add Product: To add a new product, select option 1 from the menu and enter the required
+details such as the product name, buying price, selling price, quantity of products, description of
+the product, and expiry date.</p></li>
+                            <li><p>Update Product: To update the details of an existing product, select option 2 from the menu.
+Enter the name of the product you want to update and provide the new values for the fields you
+want to update.</p></li>
+                          <li><p>View Specific Product: To view the details of a specific product, select option 3 from the
+menu. Enter the name of the product you want to view the details of.</p></li>
+                          <li><p>View All Products: To view the details of all products, select option 4 from the menu</p></li>
+                          <li><p>Delete a Product: To delete a product, select option 5 from the menu. Enter the name of the
+product you want to delete.</p></li>
+                          <li><p>Sell a Product: To sell a product, select option 6 from the menu. Enter the name of the
+product you want to sell and the quantity you want to sell</p></li>
+                          <li><p>View Transactions: To view all transactions, select option 7 from the menu</p></li>
+                          <li><p>Generate a Balance Sheet: To generate a balance sheet, select option 8 from the menu. It
+will show the total inventory value, total sales, and total profit.</p></li>
+                           <li><p>Exit the Program: To exit the program, select option 0 from the menu.</p></li>
                         </ul>
                     </li>
-                    <li>File Storage for future Retrivals
+                    <li>Saving data
                         <ul>
-                            <li>The app maintains a digital record of daily transactions. 
-                                Each day’s data is stored in a file</li>
+                            <li>The data of products and transactions is saved in 'products.txt' and 'transactions.txt' files,
+respectively. These files are created automatically when you run the program.
+The data is saved in JSON format to preserve the structure of the objects.</li>
                             <li>Mr. Benson can easily retrieve historical information whenever needed. 
                                 Whether it’s for tax purposes or business analysis, the app ensures that crucial data is organized and accessible.</li>
                         </ul>
@@ -66,7 +81,7 @@ transactions, and generate a balance sheet</p></li>
 sales, and generating a balance sheet. By following the user manual and using the program as
 intended, you can efficiently manage your products and track your sales
                           </li>
-                            <li><p><b>NOTE:<b>Program uses a command-line interface and stores file in form of a text file</p></li>
+                            <li><p><b>NOTE:<br>Program uses a command-line interface and stores file in form of a text file</p></li>
                         </ul>
                     </li>
                 </ul></li>
