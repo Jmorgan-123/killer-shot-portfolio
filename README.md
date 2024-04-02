@@ -5,7 +5,7 @@
     <h2>Table of Contents</h2>
     <ul>
       <li><a href="#how">How i build this?</a></li>
-      <li><a href ="#">projectss</a>
+      <li><a href ="#">projects</a>
         <ul>
           <li><a href="#">School website</a></li>
           <li><a href="#"> Mr. Benson kiosk manager</a></li>
@@ -59,7 +59,7 @@ transactions, and generate a balance sheet</p></li>
                                 Whether it’s for tax purposes or business analysis, the app ensures that crucial data is organized and accessible.</li>
                         </ul>
                     </li>
-                    <li>Note
+                    <li>conclusion
                         <ul>
                             <li><p>Program uses a command-line interface and stores file in form of a text file</p></li>
                         </ul>
