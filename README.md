@@ -5,17 +5,17 @@
     <h2>Table of Contents</h2>
     <ul>
       <li><a href="#how">How i build this?</a></li>
-      <li><a href ="#">projects</a>
+      <li><a href ="#project">projects</a>
         <ul>
-          <li><a href="#">School website</a></li>
-          <li><a href="#"> Mr. Benson kiosk manager</a></li>
+          <li><a href="#school">School website</a></li>
+          <li><a href="#mr_benson"> Mr. Benson kiosk manager</a></li>
         </ul>
       </li>
     </ul>
     <div id="how">
       <h2>How i build this</h2>
-      <p>I built this portfolio using HTML. 
-          And GitHub Pages provides a platform to host my portfolio, that is accessible to anyone.</p>
+      <p>I built this portfolio using HTML
+          and GitHub Pages that provides a platform to host my portfolio, that is accessible to anyone.</p>
     </div>
     <div id="project">
       <h2>projects</h2>
@@ -26,6 +26,7 @@
                 <p>This is my individual website built with HTML and CSS. 
                 It is a school website that provides details about the school. 
                     This website provides information about st.dt academy their achievements,courses,teachers and a gallery .</p>
+              <li><b>NOTE</b><p>The project is still being worked on</p></li>
               </ul></div>
           </li>
           <div id="mr_benson">
@@ -46,7 +47,7 @@ transactions, and generate a balance sheet</p></li>
                     </li>
                     <li>Actions
                         <ul>
-                            <li><p>- Add Product: To add a new product, select option 1 from the menu and enter the required
+                            <li><p>Add Product: To add a new product, select option 1 from the menu and enter the required
 details such as the product name, buying price, selling price, quantity of products, description of
 the product, and expiry date.</p></li>
                             <li><p>Update Product: To update the details of an existing product, select option 2 from the menu.
@@ -81,7 +82,8 @@ The data is saved in JSON format to preserve the structure of the objects.</li>
 sales, and generating a balance sheet. By following the user manual and using the program as
 intended, you can efficiently manage your products and track your sales
                           </li>
-                            <li><p><b>NOTE:<br>Program uses a command-line interface and stores file in form of a text file</p></li>
+                          <li><b>NOTE</b></li>
+                            <li><p>Program uses a command-line interface and stores file in form of a text file</p></li>
                         </ul>
                     </li>
                 </ul></li>
