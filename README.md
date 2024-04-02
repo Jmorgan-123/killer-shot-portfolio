@@ -1,14 +1,14 @@
 # Code Portfolio
 <html>
   <body>
-    <p>Welcome to my code portfolio,i am a dedicated computer science student passionate about problem-solving and coding. This shows my projects demonstrating my skills in programming languages, algorithm design, and software development. With a deep love for technology's potential to shape the world, I'm eager to collaborate, learn, and innovate with fellow enthusiasts. Thank you for visiting, and let's harness the power of code together!</p>
+    <p>Hi my name is Tuko, Welcome to my code portfolio,i am a dedicated computer science student passionate about problem-solving and coding. This shows my projects demonstrating my skills in programming languages, algorithm design, and software development. With a deep love for technology's potential to shape the world, I'm eager to collaborate, learn, and innovate with fellow enthusiasts. Thank you for visiting, and let's harness the power of code together!</p>
     <h2>Table of Contents</h2>
     <ul>
       <li><a href="#how">How i build this?</a></li>
-      <li><a href ="#project">projects</a>
+      <li><a href ="#project">projects.</a>
         <ul>
           <li><a href="#school">School website</a></li>
-          <li><a href="#mr_benson"> Mr. Benson kiosk manager</a></li>
+          <li><a href="#mr_benson"> Mr. Benson kiosk manager.</a></li>
         </ul>
       </li>
     </ul>
@@ -18,15 +18,15 @@
           and GitHub Pages that provides a platform to host my portfolio, that is accessible to anyone.</p>
     </div>
     <div id="project">
-      <h2>Projects</h2>
+      <h2>Projects.</h2>
         <p>Here's are some of my projects that I've been working on:</p>
         <ul>
-          <li><h4>Web Development</h4>
+          <li><h4>Web Development.</h4>
             <div id="school"><ul><li><a href="https://infernoduk.github.io/Code-portfolio/" target="_blank">ST dt school Website</a></li>
                 <p>This is my individual website built with HTML and CSS. 
                 It is a school website that provides details about the school. 
                     This website provides information about st.dt academy their achievements,courses,teachers and a gallery .</p>
-              <li><b>NOTE:</b><p>The project is still being worked on</p></li>
+              <li><b>NOTE:</b><p>The project is still being worked on.</p></li>
               </ul></div>
           </li>
           <div id="mr_benson">
@@ -59,7 +59,7 @@ menu. Enter the name of the product you want to view the details of.</p></li>
                           <li><p>Delete a Product: To delete a product, select option 5 from the menu. Enter the name of the
 product you want to delete.</p></li>
                           <li><p>Sell a Product: To sell a product, select option 6 from the menu. Enter the name of the
-product you want to sell and the quantity you want to sell</p></li>
+product you want to sell and the quantity you want to sell.</p></li>
                           <li><p>View Transactions: To view all transactions, select option 7 from the menu</p></li>
                           <li><p>Generate a Balance Sheet: To generate a balance sheet, select option 8 from the menu. It
 will show the total inventory value, total sales, and total profit.</p></li>
@@ -80,7 +80,7 @@ The data is saved in JSON format to preserve the structure of the objects.</li>
                           <li>
                             The Product Inventory Management System is a powerful tool for managing product inventory,
 sales, and generating a balance sheet. By following the user manual and using the program as
-intended, you can efficiently manage your products and track your sales
+intended, you can efficiently manage your products and track your sales.
                           </li>
                           <li><b>NOTE:</b></li>
                             <p>Program uses a command-line interface and stores file in form of a text file.</p>
