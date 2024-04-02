@@ -30,7 +30,7 @@
           </li>
           <div id="mr_benson">
             <li><h4> Python Language</h4>
-            <ul><li><a href="https://colab.research.google.com/drive/1awIaWsj151bDURByENUIoGxYKO45n1wo">Mr Benson's Kiosk Profit Tracker App</a></li>
+            <ul><li><a href="Kiosk/Mr.benson.py">Mr Benson's Kiosk Profit Tracker App</a></li>
                 <p>During fall semester last year, I developed a practical application called the Benson's Kiosk Management App. 
                     This project aimed to assist Mr. Benson, run his business efficiently . Here are the features of the app:</p>
                 <li><h5>Features</h5>
@@ -61,7 +61,12 @@ transactions, and generate a balance sheet</p></li>
                     </li>
                     <li>conclusion
                         <ul>
-                            <li><p>Program uses a command-line interface and stores file in form of a text file</p></li>
+                          <li>
+                            The Product Inventory Management System is a powerful tool for managing product inventory,
+sales, and generating a balance sheet. By following the user manual and using the program as
+intended, you can efficiently manage your products and track your sales
+                          </li>
+                            <li><p><b>NOTE:<b>Program uses a command-line interface and stores file in form of a text file</p></li>
                         </ul>
                     </li>
                 </ul></li>
