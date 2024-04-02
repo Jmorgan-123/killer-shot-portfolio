@@ -18,7 +18,7 @@
           and GitHub Pages that provides a platform to host my portfolio, that is accessible to anyone.</p>
     </div>
     <div id="project">
-      <h2>projects</h2>
+      <h2>Projects</h2>
         <p>Here's are some of my projects that I've been working on:</p>
         <ul>
           <li><h4>Web Development</h4>
@@ -26,14 +26,14 @@
                 <p>This is my individual website built with HTML and CSS. 
                 It is a school website that provides details about the school. 
                     This website provides information about st.dt academy their achievements,courses,teachers and a gallery .</p>
-              <li><b>NOTE</b><p>The project is still being worked on</p></li>
+              <li><b>NOTE:</b><p>The project is still being worked on</p></li>
               </ul></div>
           </li>
           <div id="mr_benson">
             <li><h4> Python Language</h4>
-            <ul><li><a href="Kiosk/Mr.benson.py">Mr Benson's Kiosk Profit Tracker App</a></li>
+            <ul><li><a href="Kiosk/Mr.benson.py">Mr Benson's kiosk manager App</a></li>
                 <p>During fall semester last year, I developed a practical application called the Benson's Kiosk Management App. 
-                    This project aimed to assist Mr. Benson, run his business efficiently . Here are the features of the app:</p>
+                    This project aimed to assist Mr. Benson run his business efficiently . Here are the features of the app:</p>
                 <li><h5>Features</h5>
                 <ul>
                     <li>Introduction
@@ -82,8 +82,8 @@ The data is saved in JSON format to preserve the structure of the objects.</li>
 sales, and generating a balance sheet. By following the user manual and using the program as
 intended, you can efficiently manage your products and track your sales
                           </li>
-                          <li><b>NOTE</b></li>
-                            <li><p>Program uses a command-line interface and stores file in form of a text file</p></li>
+                          <li><b>NOTE:</b></li>
+                            <p>Program uses a command-line interface and stores file in form of a text file.</p>
                         </ul>
                     </li>
                 </ul></li>
