@@ -22,7 +22,7 @@
         <p>Here's are some of my projects that I've been working on:</p>
         <ul>
           <li><h4>Web Development</h4>
-            <div id="gym"><ul><li><a href="https://massivegym.store" target="_blank">Massivegym Website</a></li>
+            <div id="gym"><ul><li><a href="" target="_blank">ST dt school Website</a></li>
                 <p>This is my individual website built with HTML and CSS. 
                 It is a school website that provides details about the school. 
                     This website provides information about st.dt academy their achievements,courses,teachers and a gallery .</p>
@@ -70,7 +70,7 @@
                     <p>I have also done other simple practice projects in python, html,css,javascript, and c++. 
                         These serves the purpose of sharpening my coding skills.
                         Follow the link to find the repository where some of the projects are located
-                    <a href="https://github.com/Cychtech/portfolio/tree/main/reference%20code"> here</a></p>
+                    <a href=""> here</a></p>
                 </ul>
             </li>
         </ul>
