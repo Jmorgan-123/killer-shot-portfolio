@@ -67,12 +67,12 @@ transactions, and generate a balance sheet</p></li>
                 </ul></li>
                 </ul></li>
           </div>
-            <li><h4>Other Practice</h4>
+            <li><h4>Other tasks</h4>
                 <ul>
-                    <p>I have also done other simple practice projects in python, html,css,javascript, and c++. 
-                        These serves the purpose of sharpening my coding skills.
-                        Follow the link to find the repository where some of the projects are located
-                    <a href="Area_of_shapes"> here</a></p>
+                    <p>I have also done other simple practice tasks in python and c++. 
+                        These hepls in advancing my knowledge in other languages.
+                        Follow the link to see my other tasks.
+                    <a href="Area_of_shapes"> more</a></p>
                 </ul>
             </li>
         </ul>
