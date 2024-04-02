@@ -35,10 +35,12 @@
                     This project aimed to assist Mr. Benson, run his business efficiently . Here are the features of the app:</p>
                 <li><h5>Features</h5>
                 <ul>
-                    <li>Sales and Purchases Tracking
+                    <li>Introduction
                         <ul>
-                            <li><p>The app allows record for new daily sales and purchases. 
-                                    Gives the capability to input the quantity and price of items sold and purchased</p></li>
+                            <li><p>The Product Inventory Management System is a program that helps in managing the
+inventory of products. It allows you to add new products, update the details of existing products,
+view details of specific products, view all products, delete a product, sell a product, view
+transactions, and generate a balance sheet</p></li>
                             <li><p>It computes the total sales and total purchases for each day, providing Mr. Benson with a clear overview of his business transactions.</p></li>
                         </ul>
                     </li>
