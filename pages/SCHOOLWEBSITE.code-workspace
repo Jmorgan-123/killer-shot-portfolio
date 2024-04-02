@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Desktop/Login form"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Login form"
+	}
+}
