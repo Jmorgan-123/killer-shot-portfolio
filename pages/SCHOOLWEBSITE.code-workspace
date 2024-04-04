@@ -1,13 +1,42 @@
-{
-	"folders": [
-		{
-			"path": ".."
-		},
-		{
-			"path": "../../../../Desktop/Login form"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Login form"
-	}
-}
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Define routes
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/admissions')
+def admissions():
+    return render_template('admissions.html')
+
+@app.route('/academics')
+def academics():
+    return render_template('academics.html')
+
+@app.route('/studentlife')
+def student_life():
+    return render_template('studentlife.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+# Additional route for news and events
+@app.route('/news')
+def news():
+    # Fetch latest news from a database or API
+    news_articles = [
+        {'title': 'USIU Hosts International Tech Conference', 'date': 'March 15, 2024', 'content': 'Lorem ipsum...'},
+        {'title': 'New Campus Expansion Plans Revealed', 'date': 'March 10, 2024', 'content': 'Lorem ipsum...'},
+        {'title': 'Student Achievements Recognized in National Competition', 'date': 'March 5, 2024', 'content': 'Lorem ipsum...'}
+    ]
+    return render_template('news.html', articles=news_articles)
+
+if __name__ == '__main__':
+    app.run(debug=True)
