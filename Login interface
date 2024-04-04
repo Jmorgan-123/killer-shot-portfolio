@@ -1,0 +1,147 @@
+from flask import Flask, render_template, redirect, flash, request, url_for
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from password_strength import PasswordPolicy
+from flask_talisman import Talisman
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField
+from wtforms.validators import InputRequired, Email, Length
+import secrets
+import pyotp
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+limiter = Limiter(app, key_func=get_remote_address)
+password_policy = PasswordPolicy.from_names(
+    length=8,
+    uppercase=1,
+    numbers=1,
+    special=1,
+)
+talisman = Talisman(app, content_security_policy={
+    'default-src': "'self'",
+    'style-src': "'self' 'unsafe-inline'",
+    'script-src': "'self' 'unsafe-inline'",
+    'img-src': "'self'",
+
+})
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(60), nullable=False)
+    is_verified = db.Column(db.Boolean, default=False)
+    verification_token = db.Column(db.String(100))
+    otp_secret = db.Column(db.String(16))
+    is_active = db.Column(db.Boolean, default=True)
+
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[InputRequired(), Email(message='Invalid email'), Length(max=120)])
+    password = PasswordField('Password', validators=[InputRequired(), Length(min=8)])
+    remember = BooleanField('Remember me')
+
+class RegisterForm(FlaskForm):
+    username = StringField('Username', validators=[InputRequired(), Email(message='Invalid email'), Length(max=120)])
+    password = PasswordField('Password', validators=[InputRequired(), Length(min=8)])
+    remember = BooleanField('Remember me')
+
+def validate_empty_fields(form):
+    return all(field.data for field in form)
+
+def validate_password_policy(password):
+    return password_policy.test(password)
+
+def validate_email_format(email):
+    return Email()(None, email)
+
+def register_user(username, password):
+    try:
+        if not validate_password_policy(password):
+            flash("Password does not meet the required policy", "danger")
+            return
+
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        new_user = User(username=username, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+
+        token = secrets.token_urlsafe(32)
+        verification_link = url_for("verify_email", token=token, _external=True)
+        send_verification_email(username, verification_link)
+        flash("Account created successfully! Check your email for verification.", "success")
+
+    except Exception as e:
+        flash(f"An error occurred: {str(e)}", "danger")
+
+def send_verification_email(username, verification_link):
+    pass
+
+def login_user_and_redirect(user, form):
+    login_user(user, remember=form.remember.data)
+    flash("Login successful", "success")
+    return redirect(url_for("dashboard"))
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    form = RegisterForm()
+    if request.method == 'POST' and validate_empty_fields(form):
+        username = form.username.data
+        password = form.password.data
+
+        register_user(username, password)
+
+    return render_template("register.html", form=form)
+
+@app.route("/login", methods=["POST"])
+def login():
+    form = LoginForm()
+    if request.method == 'POST' and validate_empty_fields(form):
+        username = form.username.data
+        password = form.password.data
+
+        user = User.query.filter_by(username=username).first()
+
+        if user and bcrypt.check_password_hash(user.password, password):
+            if user.is_active:
+                if user.otp_secret:
+                    totp = pyotp.TOTP(user.otp_secret)
+                    if not totp.verify(request.form.get('otp')):
+                        flash("Invalid TOTP", "danger")
+                        return redirect(url_for("login"))
+
+                return login_user_and_redirect(user, form)
+            else:
+                flash("Your account is deactivated.", "danger")
+        else:
+            flash("Invalid username or password", "danger")
+
+    return render_template("login.html", form=form)
+
+@app.route("/deactivate_account/<int:user_id>")
+@login_required
+def deactivate_account(user_id):
+    if current_user.id == user_id:
+        current_user.is_active = False
+        db.session.commit()
+        flash("Your account has been deactivated.", "success")
+        logout_user()
+        return redirect(url_for("login"))
+    else:
+        flash("You are not authorized to deactivate this account.", "danger")
+        return redirect(url_for("dashboard"))
+
+
+if __name__ == "__main__":
+    db.create_all()
+    app.run(debug=True)
