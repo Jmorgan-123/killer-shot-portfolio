@@ -1,0 +1,65 @@
+import json
+import os
+
+class DataManager:
+    def __init__(self):
+        self.products_file = "products.json"
+        self.transactions_file = "transactions.json"
+        self.product_list = self.load_data(self.products_file)
+        self.transactions = self.load_data(self.transactions_file)
+
+    def load_data(self, filename):
+        if os.path.exists(filename):
+            with open(filename, "r") as file:
+                data = json.load(file)
+            return data if isinstance(data, list) else []
+        else:
+            return []
+
+    def save_data(self, data, filename):
+        with open(filename, "w") as file:
+            json.dump(data, file, indent=4)
+
+    def add_product(self, product):
+        self.product_list.append(product)
+        self.save_data(self.product_list, self.products_file)
+
+    def add_transaction(self, transaction):
+        self.transactions.append(transaction)
+        self.save_data(self.transactions, self.transactions_file)
+
+    def get_product_list(self):
+        return self.product_list
+
+    def get_transactions(self):
+        return self.transactions
+
+# Example usage:
+if __name__ == "__main__":
+    data_manager = DataManager()
+
+    # Sample product and transaction data
+    sample_product = {
+        "name": "Bread",
+        "buying_price": 20,
+        "selling_price": 30,
+        "quantity": 100
+    }
+
+    sample_transaction = {
+        "product_name": "Bread",
+        "quantity_sold": 5,
+        "selling_price": 30,
+        "total_sale": 150,
+        "timestamp": "2024-04-07 10:30:00"
+    }
+
+    # Add sample product and transaction
+    data_manager.add_product(sample_product)
+    data_manager.add_transaction(sample_transaction)
+
+    # Get updated product list and transactions
+    print("Updated Product List:")
+    print(data_manager.get_product_list())
+    print("\nUpdated Transactions:")
+    print(data_manager.get_transactions())
